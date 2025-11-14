@@ -8,19 +8,28 @@
         content="Brand Growth Studio is a Toronto web design and marketing agency creating fast, conversion-focused websites for growth-minded brands." />
 
   <style>
-    :root {
-      --bg: #050814;
-      --bg-alt: #060b1b;
-      --card: #0b1120;
-      --accent: #38bdf8;
-      --accent-soft: rgba(56, 189, 248, 0.1);
-      --accent-2: #22c55e;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --border: rgba(148, 163, 184, 0.3);
-      --max-width: 1120px;
-      --radius-lg: 18px;
-      --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.7);
+:root {
+  /* Backgrounds */
+  --bg: #050816;        /* Deep blue-black */
+  --bg-alt: #0b1020;    /* Slightly lighter for sections */
+  --card: #0f172a;      /* Card / panel background */
+
+  /* Accents */
+  --accent: #f97316;    /* Warm orange – primary CTA */
+  --accent-soft: rgba(249, 115, 22, 0.12);
+  --accent-2: #22c55e;  /* Fresh green – secondary, success, tags */
+
+  /* Text */
+  --text: #f9fafb;      /* Main text */
+  --muted: #9ca3af;     /* Secondary / muted text */
+
+  /* Borders & shadows */
+  --border: rgba(148, 163, 184, 0.35);
+  --max-width: 1120px;
+  --radius-lg: 18px;
+  --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.7);
+}
+
     }
 
     * {
@@ -118,22 +127,19 @@
 
     .pill {
       border-radius: 999px;
-      border: 1px solid var(--border);
+      border: 1px solid var(--accent-soft);
       padding: 0.35rem 0.9rem;
       font-size: 0.78rem;
-      color: #c7d2fe;
-      background: rgba(15, 23, 42, 0.9);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
+      color: #fed7aa;
+      background: rgba(15, 23, 42, 0.95);
     }
-
+    
     .pill-dot {
       width: 7px;
       height: 7px;
       border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.18);
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(249, 115, 22, 0.18);
     }
 
     .hero {
@@ -152,7 +158,7 @@
     }
 
     .hero h1 span {
-      background: linear-gradient(120deg, var(--accent-2), var(--accent));
+      background: linear-gradient(120deg, var(--accent), var(--accent-2));
       -webkit-background-clip: text;
       color: transparent;
     }
@@ -190,7 +196,7 @@
       border-radius: 999px;
       padding: 0.85rem 1.6rem;
       border: none;
-      background: linear-gradient(135deg, var(--accent-2), var(--accent));
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
       color: #020617;
       font-weight: 600;
       font-size: 0.94rem;
@@ -198,7 +204,7 @@
       align-items: center;
       gap: 0.45rem;
       cursor: pointer;
-      box-shadow: 0 18px 40px rgba(34, 197, 94, 0.55);
+      box-shadow: 0 18px 40px rgba(249, 115, 22, 0.55);
       text-decoration: none;
     }
 
@@ -207,7 +213,7 @@
       padding: 0.8rem 1.4rem;
       border: 1px solid var(--border);
       background: rgba(15, 23, 42, 0.9);
-      color: #e5e7eb;
+      color: var(--text);
       font-size: 0.86rem;
       display: inline-flex;
       align-items: center;
