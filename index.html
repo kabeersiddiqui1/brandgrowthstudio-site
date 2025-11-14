@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Brand Growth Studio | Marketing That Actually Grows Revenue</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Brand Growth Studio helps growing businesses turn browsers into buyers with performance-driven marketing and clean, modern branding." />
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-soft: #0b1020;
+      --accent: #00e6b8;
+      --accent-soft: rgba(0, 230, 184, 0.12);
+      --text: #f9fafb;
+      --muted: #a5b4fc;
+      --card: rgba(15, 23, 42, 0.9);
+      --border: rgba(148, 163, 184, 0.3);
+      --radius-xl: 18px;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.7);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      min-height: 100vh;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .logo-circle {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 20% 20%, #4f46e5, #22c55e, #06b6d4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.7);
+    }
+
+    .logo-circle span {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #e5e7eb;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .logo-text strong {
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      color: #e5e7eb;
+    }
+
+    .logo-text span {
+      font-size: 0.72rem;
+      color: #9ca3af;
+    }
+
+    .pill {
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      padding: 0.4rem 0.9rem;
+      font-size: 0.78rem;
+      color: #cbd5f5;
+      background: rgba(15, 23, 42, 0.8);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.15);
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 2.75rem;
+      align-items: center;
+    }
+
+    @media (max-width: 840px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .hero-heading {
+      font-size: clamp(2.3rem, 3vw + 1.5rem, 3.2rem);
+      line-height: 1.05;
+      margin: 0 0 0.75rem;
+    }
+
+    .hero-heading span.accent {
+      background: linear-gradient(120deg, #22c55e, #14b8a6, #38bdf8);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      max-width: 34rem;
+      color: #cbd5f5;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .hero-meta span strong {
+      color: #e5e7eb;
+      font-weight: 600;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .btn-primary {
+      border-radius: 999px;
+      padding: 0.85rem 1.5rem;
+      border: none;
+      background: linear-gradient(135deg, #22c55e, #14b8a6);
+      color: #020617;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      box-shadow: 0 16px 35px rgba(16, 185, 129, 0.55);
+    }
+
+    .btn-secondary {
+      border-radius: 999px;
+      padding: 0.8rem 1.3rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.85);
+      color: #e5e7eb;
+      font-size: 0.86rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-primary span.icon,
+    .btn-secondary span.icon {
+      font-size: 1.1rem;
+    }
+
+    .hero-note {
+      font-size: 0.78rem;
+      color: #9ca3af;
+      margin-top: 0.5rem;
+    }
+
+    .hero-right {
+      background: radial-gradient(circle at top left, #1e293b, #020617);
+      border-radius: 24px;
+      padding: 1.5rem 1.5rem 1.2rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .hero-right-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-right-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .chip {
+      border-radius: 999px;
+      padding: 0.2rem 0.7rem;
+      background: rgba(34, 197, 94, 0.13);
+      color: #bbf7d0;
+      font-size: 0.75rem;
+      border: 1px solid rgba(34, 197, 94, 0.35);
+    }
+
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .kpi-card {
+      padding: 0.7rem 0.8rem;
+      border-radius: 16px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
+    .kpi-label {
+      font-size: 0.75rem;
+      color: #9ca3af;
+      margin-bottom: 0.3rem;
+    }
+
+    .kpi-value {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .kpi-tag {
+      margin-top: 0.15rem;
+      font-size: 0.7rem;
+      color: #a5b4fc;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    @media (max-width: 840px) {
+      .services {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .service-card {
+      padding: 1rem;
+      border-radius: var(--radius-xl);
+      background: var(--card);
+      border: 1px solid var(--border);
+    }
+
+    .service-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .service-body {
+      font-size: 0.8rem;
+      color: #cbd5f5;
+      line-height: 1.5;
+    }
+
+    .section {
+      margin-top: 1rem;
+      padding: 1.4rem 1.5rem;
+      border-radius: 20px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: linear-gradient(
+        130deg,
+        rgba(15, 23, 42, 0.95),
+        rgba(15, 23, 42, 0.75),
+        rgba(8, 47, 73, 0.95)
+      );
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .section-header h2 {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .section-header p {
+      margin: 0.15rem 0 0;
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.6rem;
+    }
+
+    .badge {
+      font-size: 0.72rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: #e5e7eb;
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      align-items: center;
+      margin-top: 0.6rem;
+    }
+
+    .contact-row a {
+      color: var(--accent);
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 1.5rem;
+      font-size: 0.75rem;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    footer a {
+      color: #9ca3af;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="logo-mark">
+        <div class="logo-circle">
+          <span>BG</span>
+        </div>
+        <div class="logo-text">
+          <strong>Brand Growth Studio</strong>
+          <span>Marketing & growth strategy</span>
+        </div>
+      </div>
+
+      <div class="pill">
+        <span class="pill-dot"></span>
+        <span>Currently taking on 2 new clients</span>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h1 class="hero-heading">
+          Marketing that <span class="accent">turns attention into revenue.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Brand Growth Studio helps growing businesses build clean, modern brands
+          and performance-driven campaigns so every dollar you spend on marketing
+          has a job to do.
+        </p>
+
+        <div class="hero-meta">
+          <span><strong>What we do:</strong> Strategy · Paid ads · Funnels · Email</span>
+          <span><strong>Who we serve:</strong> Service businesses & online brands</span>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn-primary" href="mailto:zainab@brandgrowthstudio.ca?subject=Discovery%20Call%20Request">
+            <span class="icon">➜</span>
+            <span>Request a 20-minute discovery call</span>
+          </a>
+          <a class="btn-secondary" href="mailto:zainab@brandgrowthstudio.ca">
+            <span class="icon">✉</span>
+            <span>Email your challenge</span>
+          </a>
+        </div>
+        <p class="hero-note">
+          No pressure, no jargon — just a clear view of what’s working, what’s
+          wasting budget, and where to focus next.
+        </p>
+      </section>
+
+      <aside class="hero-right">
+        <div class="hero-right-header">
+          <div>
+            <div class="hero-right-title">Growth snapshot, not guesswork.</div>
+            <div style="font-size: 0.8rem; color: #9ca3af; margin-top: 0.15rem;">
+              We look at your full funnel, not isolated metrics.
+            </div>
+          </div>
+          <span class="chip">Marketing scorecard</span>
+        </div>
+
+        <div class="kpi-row">
+          <div class="kpi-card">
+            <div class="kpi-label">Ad spend efficiency</div>
+            <div class="kpi-value">+32%</div>
+            <div class="kpi-tag">Average CPA reduction goal</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Lead quality</div>
+            <div class="kpi-value">↑</div>
+            <div class="kpi-tag">Better fit, fewer no-shows</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Time to clarity</div>
+            <div class="kpi-value">14 days</div>
+            <div class="kpi-tag">Roadmap delivered</div>
+          </div>
+        </div>
+
+        <div class="services">
+          <div class="service-card">
+            <div class="service-title">Brand & offer clarity</div>
+            <div class="service-body">
+              Sharpen your positioning, refine your offers, and make it obvious
+              why the right people should choose you over competitors.
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-title">Paid traffic that converts</div>
+            <div class="service-body">
+              Google, Meta, and YouTube campaigns built to test quickly, kill
+              waste, and double down on what produces real revenue.
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-title">Retention & nurture</div>
+            <div class="service-body">
+              Simple email and nurture flows that turn first-time buyers into
+              repeat clients and reliable monthly revenue.
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>How Brand Growth Studio works with you</h2>
+          <p>Simple, collaborative and focused on measurable outcomes.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; font-size: 0.8rem;">
+        <div>
+          <strong>1. Discovery & audit</strong>
+          <p style="margin-top: 0.3rem; color: #cbd5f5;">
+            We review your existing website, funnels and campaigns, then
+            highlight the 3–5 highest-leverage changes.
+          </p>
+        </div>
+        <div>
+          <strong>2. Roadmap & quick wins</strong>
+          <p style="margin-top: 0.3rem; color: #cbd5f5;">
+            You get a clear 90-day plan and we implement the fastest wins first
+            — landing pages, ad tweaks, tracking fixes.
+          </p>
+        </div>
+        <div>
+          <strong>3. Ongoing optimization</strong>
+          <p style="margin-top: 0.3rem; color: #cbd5f5;">
+            We iterate based on data, not hunches, and keep you updated with
+            simple, non-fluffy reporting.
+          </p>
+        </div>
+      </div>
+
+      <div class="badges">
+        <span class="badge">Done-with-you or done-for-you</span>
+        <span class="badge">Monthly or project-based engagements</span>
+        <span class="badge">Transparent reports & dashboards</span>
+      </div>
+
+      <div class="contact-row">
+        <div>
+          Ready to see if we’re a fit?
+          <a href="mailto:zainab@brandgrowthstudio.ca?subject=Brand%20Growth%20Studio%20Fit%20Check">
+            Email Zainab at zainab@brandgrowthstudio.ca
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Brand Growth Studio. All rights reserved.
+      &middot;
+      <a href="mailto:zainab@brandgrowthstudio.ca">Contact</a>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
