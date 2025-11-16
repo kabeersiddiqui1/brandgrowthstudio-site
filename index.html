@@ -6,22 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
         content="Brand Growth Studio is a Mississauga web design and marketing agency creating fast, conversion-focused websites for growth-minded brands." />
-
-  <!-- External stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="page">
-    <header>
+    <!-- HEADER -->
+    <header class="site-header">
       <div class="logo">
         <div class="logo-mark">BG</div>
         <div class="logo-text">
           <strong>Brand Growth Studio</strong>
-          <span>Mississauga Web Design & Marketing</span>
+          <span>Mississauga Web Design &amp; Marketing</span>
         </div>
       </div>
 
-      <nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links">
         <a href="#services">Services</a>
         <a href="#process">Process</a>
         <a href="#results">Results</a>
@@ -35,28 +39,28 @@
       </div>
     </header>
 
+    <!-- HERO -->
     <section class="hero">
-      <div>
+      <div class="hero-main">
         <h1>
           Mississauga web design that <span>turns traffic into booked clients.</span>
         </h1>
+
         <p class="hero-subtitle">
-          Grow Faster with AI-Powered Marketing Systems
-          
-          For clinics, academies, and service-based businesses that want predictable leads, better conversions, and consistent monthly revenue.
-          
-          I build your end-to-end marketing engine — strategy, funnels, automation, content, and reporting — so your business grows every single month.
+          Conversion-focused websites and funnels for clinics, academies and
+          service-based businesses that want predictable leads and more
+          booked calls from the traffic they already have.
         </p>
-        <p class="hero-subtitle">
-          👉 Book Your Free Strategy Call
-        </p>
-        <p class="hero-subtitle">
-          👉 Get a Free 20-Minute Audit
-        </p>
+
+        <ul class="hero-fit">
+          <li>Your current site looks “fine” but doesn’t convert.</li>
+          <li>You’re running ads or SEO and want better ROI.</li>
+          <li>You want a clear, simple funnel instead of scattered pages.</li>
+        </ul>
 
         <div class="hero-meta">
           <span><strong>Based in:</strong> Greater Toronto Area</span>
-          <span><strong>Focus:</strong> Service businesses, B2B & online brands</span>
+          <span><strong>Focus:</strong> Service businesses, B2B &amp; online brands</span>
           <span><strong>Services:</strong> Strategy · Web Design · Funnels · Paid Ads</span>
         </div>
 
@@ -66,7 +70,6 @@
             <span>➜</span>
             <span>Request a 20-minute discovery call</span>
           </a>
-          
         </div>
 
         <p class="hero-note">
@@ -79,7 +82,7 @@
         <div class="hero-panel-header">
           <div>
             <div class="hero-panel-title">What a new site can do for you</div>
-            <div style="font-size:0.8rem;color:var(--muted);margin-top:0.2rem;">
+            <div class="hero-panel-sub">
               Every project starts with measurable goals, not just a new look.
             </div>
           </div>
@@ -90,7 +93,7 @@
           <div class="kpi">
             <div class="kpi-label">Lead-to-call rate</div>
             <div class="kpi-value">+30–60%</div>
-            <div class="kpi-tag">From better messaging & UX</div>
+            <div class="kpi-tag">From clearer offers &amp; UX</div>
           </div>
           <div class="kpi">
             <div class="kpi-label">Page load time</div>
@@ -100,11 +103,11 @@
           <div class="kpi">
             <div class="kpi-label">Clarity for visitors</div>
             <div class="kpi-value">1–2 scrolls</div>
-            <div class="kpi-tag">To understand what you do</div>
+            <div class="kpi-tag">To know what you do &amp; next step</div>
           </div>
         </div>
 
-        <p style="font-size:0.8rem;color:var(--muted);margin:0;">
+        <p class="hero-panel-copy">
           We’ll review your current site and funnel, then design around the numbers
           that actually move your business: qualified leads, booked calls and
           repeat revenue.
@@ -112,7 +115,8 @@
       </aside>
     </section>
 
-    <section id="services" class="services">
+    <!-- SERVICES -->
+    <section id="services" class="section section-alt">
       <div class="section-header">
         <div>
           <div class="tagline">Services</div>
@@ -127,7 +131,8 @@
 
       <div class="service-grid">
         <article class="service-card">
-          <h3 class="service-title">Custom website & landing pages</h3>
+          <div class="service-icon">01</div>
+          <h3 class="service-title">Custom website &amp; landing pages</h3>
           <p class="service-body">
             From first wireframe to final build, we design a site around your
             offers, your audience and your sales process – not a generic template.
@@ -139,6 +144,7 @@
         </article>
 
         <article class="service-card">
+          <div class="service-icon">02</div>
           <h3 class="service-title">Funnels that don’t leak leads</h3>
           <p class="service-body">
             Clear page flows, forms and CTAs that guide visitors from ad click to
@@ -151,7 +157,8 @@
         </article>
 
         <article class="service-card">
-          <h3 class="service-title">Ongoing optimization & support</h3>
+          <div class="service-icon">03</div>
+          <h3 class="service-title">Ongoing optimization &amp; support</h3>
           <p class="service-body">
             After launch, we iterate based on real data: heatmaps, search terms
             and user behaviour – not gut feel or design trends alone.
@@ -163,144 +170,181 @@
       </div>
     </section>
 
-    <!-- PROCESS SECTION -->
-<section id="process" class="two-column">
-  <div>
-    <div class="tagline">Process</div>
-    <h2>From first call to launch in three clear stages.</h2>
-    <p style="font-size:0.9rem;color:var(--muted);margin:0.5rem 0 1rem;">
-      We keep the process transparent and collaborative so you always know
-      what’s happening and why.
-    </p>
+    <!-- PROCESS -->
+    <section id="process" class="section two-column">
+      <div>
+        <div class="tagline">Process</div>
+        <h2>From first call to launch in three clear stages.</h2>
+        <p class="section-intro">
+          We keep the process transparent and collaborative so you always know
+          what’s happening and why.
+        </p>
 
-    <ul class="list">
-      <li>
-        <div class="list-bullet">1</div>
-        <div>
-          <strong>Discovery & audit</strong><br />
-          We review your current site, analytics and marketing, then align on
-          goals, audience and offer. You’ll receive a short findings doc and
-          proposed approach.
+        <ul class="list">
+          <li>
+            <div class="list-bullet">1</div>
+            <div>
+              <strong>Discovery &amp; audit</strong><br />
+              We review your current site, analytics and marketing, then align on
+              goals, audience and offer. You’ll receive a short findings doc and
+              proposed approach.
+            </div>
+          </li>
+          <li>
+            <div class="list-bullet">2</div>
+            <div>
+              <strong>Strategy, structure &amp; design</strong><br />
+              We map page flows, craft key messages and design high-fidelity
+              layouts. You’ll see your site before any code is written.
+            </div>
+          </li>
+          <li>
+            <div class="list-bullet">3</div>
+            <div>
+              <strong>Build, launch &amp; optimize</strong><br />
+              We develop, test and launch your site with tracking in place, then
+              refine after real users hit the pages.
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section id="results" class="section two-column section-alt">
+      <div>
+        <div class="tagline">Results</div>
+        <h2>What a strong website can do for your business.</h2>
+        <p class="section-intro">
+          Here’s an example of the type of outcomes we aim for. Your exact metrics
+          will be tailored to your offers, traffic sources and sales process.
+        </p>
+      </div>
+
+      <aside class="case-card">
+        <div class="case-label">Sample outcome</div>
+        <div class="case-title">
+          Service business website refresh → more booked consults.
         </div>
-      </li>
-      <li>
-        <div class="list-bullet">2</div>
-        <div>
-          <strong>Strategy, structure & design</strong><br />
-          We map page flows, craft key messages and design high-fidelity
-          layouts. You’ll see your site before any code is written.
+        <p>
+          A local professional services firm needed their site to match their
+          reputation and generate more qualified inquiries instead of “just
+          traffic”.
+        </p>
+
+        <div class="case-kpis">
+          <div><strong>+48%</strong><br />Increase in consultation requests</div>
+          <div><strong>+32%</strong><br />More calls from ideal-fit clients</div>
+          <div><strong>2.1x</strong><br />Return on initial redesign investment</div>
         </div>
-      </li>
-      <li>
-        <div class="list-bullet">3</div>
-        <div>
-          <strong>Build, launch & optimize</strong><br />
-          We develop, test and launch your site with tracking in place, then
-          refine after real users hit the pages.
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
 
-<!-- RESULTS SECTION -->
-<section id="results" class="two-column">
-  <div>
-    <div class="tagline">Results</div>
-    <h2>What a strong website can do for your business.</h2>
-    <p style="font-size:0.9rem;color:var(--muted);margin:0.5rem 0 1rem;">
-      Here’s an example of the type of outcomes we aim for. Your exact
-      metrics will be tailored to your offers, traffic sources, and sales
-      process.
-    </p>
-  </div>
+        <p class="case-note">
+          These are directional sample numbers to show the type of results we
+          optimize for – your metrics will be tailored to your business model.
+        </p>
+      </aside>
+    </section>
 
-  <aside class="case-card">
-    <div class="case-label">Sample outcome</div>
-    <div class="case-title">
-      Service business website refresh → more booked consults.
-    </div>
-    <p>
-      A local professional services firm needed their site to match their
-      reputation and generate more qualified inquiries instead of “just
-      traffic”.
-    </p>
+    <!-- MID-PAGE CTA BAND -->
+    <section class="section section-cta">
+      <div class="section-cta-inner">
+        <h2>Wondering what’s possible for your site?</h2>
+        <p>
+          Share your current website and goals. You’ll get 2–3 practical ideas
+          you can use right away – and a simple path if you’d like help
+          implementing them.
+        </p>
+        <a class="btn-primary"
+           href="mailto:zainab@brandgrowthstudio.ca?subject=Discovery%20Call%20Request">
+          <span>➜</span>
+          <span>Request a 20-minute discovery call</span>
+        </a>
+      </div>
+    </section>
 
-    <div class="case-kpis">
-      <div><strong>+48%</strong><br />Increase in consultation requests</div>
-      <div><strong>+32%</strong><br />More calls from ideal-fit clients</div>
-      <div><strong>2.1x</strong><br />Return on initial redesign investment</div>
-    </div>
-
-    <p style="margin-top:0.8rem;color:var(--muted);font-size:0.8rem;">
-      These are directional sample numbers to show the type of results we
-      optimize for – your metrics will be tailored to your business model.
-    </p>
-  </aside>
-</section>
-
-    <section id="faq" class="faq">
-      <div class="faq-grid">
+    <!-- FAQ -->
+    <section id="faq" class="section section-faq">
+      <div class="section-header">
         <div>
           <div class="tagline">Questions</div>
           <h2>Is Brand Growth Studio the right fit for you?</h2>
-          <p style="font-size:0.9rem;color:var(--muted);margin-top:0.7rem;">
+          <p class="section-intro">
             We’re a good fit if you care about strategy and performance as much as
             you care about aesthetics. Here are a few common questions.
           </p>
         </div>
+      </div>
 
-        <div>
-          <div class="faq-item">
-            <strong>What types of businesses do you work with?</strong>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>What types of businesses do you work with?</summary>
+          <p>
             We primarily support service-based businesses, B2B companies and online
             brands that rely on their website to generate leads or sales.
-          </div>
+          </p>
+        </details>
 
-          <div class="faq-item">
-            <strong>How much does a project cost?</strong>
+        <details class="faq-item">
+          <summary>How much does a project cost?</summary>
+          <p>
             Pricing depends on scope, but most website projects fall into a clear
-            range after a short discovery call. You’ll always receive a written
-            scope and quote before we begin.
-          </div>
+            range after a short discovery call.
+          </p>
+          <p>
+            You’ll always receive a written scope and quote before we begin, so you
+            know exactly what’s included.
+          </p>
+        </details>
 
-          <div class="faq-item">
-            <strong>Do you offer ongoing marketing support?</strong>
+        <details class="faq-item">
+          <summary>Do you offer ongoing marketing support?</summary>
+          <p>
             Yes. For some clients we simply redesign the site; for others we also
-            help with landing pages, paid ads and ongoing optimization. We can
-            start with a project and grow into a retainer if it makes sense.
-          </div>
+            help with landing pages, paid ads and ongoing optimization.
+          </p>
+          <p>
+            We can start with a one-off project and grow into a retainer if it
+            makes sense for your business.
+          </p>
+        </details>
 
-          <div class="faq-item">
-            <strong>Will I be able to update the site myself?</strong>
+        <details class="faq-item">
+          <summary>Will I be able to update the site myself?</summary>
+          <p>
             We typically build on user-friendly platforms and provide a simple
             handover so your team can edit copy and images without touching code.
-          </div>
-        </div>
+          </p>
+        </details>
       </div>
     </section>
 
-    <section id="contact" class="contact-card">
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-card">
       <div class="tagline">Next step</div>
-      <h2 style="margin:0.3rem 0 0.6rem;font-size:1.2rem;">
-        Tell us where you’re stuck. We’ll reply with ideas, not pressure.
-      </h2>
-      <p style="margin:0;font-size:0.86rem;color:#7c2d12;">
+      <h2>Tell us where you’re stuck. We’ll reply with ideas, not pressure.</h2>
+      <p class="contact-copy">
         Send a quick note about your business, your current website and what
         you’d like to improve. We’ll respond with 2–3 practical suggestions and,
         if it’s a fit, a simple path forward.
       </p>
 
+      <ul class="contact-benefits">
+        <li>A quick, plain-English review of your current site or funnel.</li>
+        <li>2–3 specific ideas to improve conversions or leads.</li>
+        <li>A rough investment range if you’d like help implementing.</li>
+      </ul>
+
       <div class="contact-row">
         <a href="mailto:zainab@brandgrowthstudio.ca?subject=Project%20Inquiry">
           ✉ Email Zainab – zainab@brandgrowthstudio.ca
         </a>
-        <span style="font-size:0.82rem;color:var(--muted);">
+        <span class="contact-meta">
           Typically replies within one business day.
         </span>
       </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
       © <span id="year"></span> Brand Growth Studio. All rights reserved.
       &middot;
@@ -309,7 +353,19 @@
   </div>
 
   <script>
+    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (navToggle && navLinks) {
+      navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("nav-open");
+        navToggle.classList.toggle("nav-open");
+      });
+    }
   </script>
 </body>
 </html>
