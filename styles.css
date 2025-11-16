@@ -200,19 +200,6 @@ nav a:hover::after {
   text-decoration: none;
 }
 
-.btn-secondary {
-  border-radius: 999px;
-  padding: 0.8rem 1.4rem;
-  border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--text);
-  font-size: 0.86rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  text-decoration: none;
-}
-
 .hero-note {
   font-size: 0.78rem;
   color: var(--muted);
