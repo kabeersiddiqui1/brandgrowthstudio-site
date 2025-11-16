@@ -871,27 +871,3 @@ footer a {
   }
 }
 
-/* ===== LARGE DESKTOP REFINEMENTS (from 1200px) ===== */
-
-@media (min-width: 1200px) {
-  .page {
-    max-width: 1200px;
-  }
-
-  .hero {
-    gap: 3.2rem;
-  }
-
-  .hero-main {
-    max-width: 40rem;
-  }
-
-  .section {
-    padding: 3rem 0 2.8rem;
-  }
-
-  .section-alt {
-    padding: 2.6rem 2.1rem 2.6rem;
-  }
-}
-
