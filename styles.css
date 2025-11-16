@@ -615,21 +615,21 @@ a {
 .contact-card {
   background: linear-gradient(135deg, #fff7ed, #f5f0e9);
   border-radius: 24px;
-  padding: 1.7rem 1.6rem 1.8rem;
+  padding: 2.2rem 2.4rem 2.2rem;
   border: 1px solid rgba(249, 115, 22, 0.35);
   box-shadow: var(--shadow-lg);
   font-size: 0.86rem;
 }
 
 .contact-copy {
-  margin: 0.3rem 0 0.8rem;
+  margin: 0.5rem 0 1rem;
   font-size: 0.9rem;
   color: #7c2d12;
 }
 
 .contact-benefits {
-  margin: 0 0 0.9rem;
-  padding-left: 1.1rem;
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
   font-size: 0.86rem;
   color: #4b5563;
 }
