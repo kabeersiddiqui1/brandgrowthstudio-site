@@ -278,7 +278,7 @@ nav a:hover::after {
 
 /* GLOBAL SECTION HEADINGS (H2) */
 .section-header h2,
-.two-column > h2,
+.two-column h2,
 .faq h2,
 .contact-card h2 {
   margin: 0 0 0.4rem;
