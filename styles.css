@@ -143,10 +143,14 @@ nav a:hover::after {
   border-bottom: 1px solid #e5e7eb;
 }
 
+/* HERO MAIN HEADING */
 .hero h1 {
-  font-size: clamp(2.4rem, 3.2vw + 1.5rem, 3.4rem);
+  font-size: clamp(2.6rem, 3.1vw + 1.6rem, 3.6rem);
   line-height: 1.05;
-  margin: 0 0 0.85rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0 0 1rem;
+  color: #111827; /* strong text */
 }
 
 .hero h1 span {
@@ -272,9 +276,42 @@ nav a:hover::after {
   padding: 2.5rem 0 1.75rem;
 }
 
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 1rem;
-  margin-bottom: 1.5rem
+/* GLOBAL SECTION HEADINGS (H2) */
+.section-header h2,
+.two-column > h2,
+.faq h2,
+.contact-card h2 {
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.7rem, 1.2rem + 1vw, 2rem);
+  line-height: 1.25;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* SERVICE / CARD TITLES (H3) */
+.service-title,
+.case-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 0.45rem;
+}
+
+/* SMALL SECTION LABEL ABOVE HEADINGS */
+.tagline {
+  display: inline-block;
+  margin-bottom: 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #b45309; /* slightly stronger warm accent */
+}
+
+/* Extra spacing between sections so headings breathe */
+.services,
+.two-column,
+.faq,
+.contact-card {
+  scroll-margin-top: 80px; /* nicer jump when clicking nav */
+}
