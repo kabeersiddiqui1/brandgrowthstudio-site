@@ -234,7 +234,7 @@ nav a:hover::after {
 }
 
 .chip {
-  border-radius: 999px;
+  border-radius: 199px;
   padding: 0.25rem 0.7rem;
   font-size: 0.74rem;
   background: var(--accent-soft);
