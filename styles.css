@@ -31,6 +31,7 @@ body {
   background: radial-gradient(circle at top, #f9f4ee 0, #f5f0e9 40%, #efe5db 100%);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
+  line-height: 1.5; 
 }
 
 a {
@@ -249,7 +250,7 @@ nav a:hover::after {
 }
 
 .kpi {
-  background: #ffffff;
+  background: var(--card);
   border-radius: 16px;
   padding: 0.8rem 0.8rem;
   border: 1px solid var(--border);
