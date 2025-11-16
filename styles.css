@@ -802,7 +802,7 @@ footer a {
   }
 
   .hero-panel {
-    order: -1;              /* show stats card first */
+    order: 0;              /* show stats card first */
     padding: 1.25rem 1.1rem 1.1rem;
   }
 
