@@ -738,3 +738,160 @@ footer a {
     text-align: left;
   }
 }
+
+/* ===== MOBILE VERSION (up to 768px) ===== */
+
+@media (max-width: 768px) {
+
+  body {
+    background: #f5f0e9; /* slightly simpler background on small screens */
+  }
+
+  .page {
+    padding: 1.25rem 1rem 2.4rem;
+  }
+
+  /* Header */
+  .site-header {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    row-gap: 0.75rem;
+  }
+
+  .logo-text span {
+    font-size: 0.7rem;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    justify-self: end;
+  }
+
+  .nav-links {
+    grid-column: 1 / -1;
+    margin-top: 0.25rem;
+    padding: 0.75rem 0.85rem;
+    border-radius: 14px;
+    background: rgba(255, 247, 237, 0.95);
+    border: 1px solid var(--border);
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .nav-links.nav-open {
+    display: flex;
+  }
+
+  .pill {
+    display: none; /* hide booking pill on very small screens */
+  }
+
+  /* Hero */
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.8rem;
+    padding: 1.4rem 0 2.2rem;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .hero-panel {
+    order: -1;              /* show stats card first */
+    padding: 1.25rem 1.1rem 1.1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.96rem;
+  }
+
+  .hero-fit {
+    font-size: 0.88rem;
+  }
+
+  .hero-meta {
+    font-size: 0.82rem;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Sections */
+  .section {
+    padding: 2.1rem 0 2rem;
+  }
+
+  .section-alt {
+    margin-top: 1.6rem;
+    padding: 1.7rem 1.25rem 1.8rem;
+    border-radius: 18px;
+  }
+
+  .two-column {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .service-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .case-kpis {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .section-cta-inner {
+    text-align: left;
+    padding: 1.7rem 1.25rem 1.8rem;
+  }
+
+  .contact-card {
+    padding: 1.5rem 1.25rem 1.6rem;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ===== LARGE DESKTOP REFINEMENTS (from 1200px) ===== */
+
+@media (min-width: 1200px) {
+  .page {
+    max-width: 1200px;
+  }
+
+  .hero {
+    gap: 3.2rem;
+  }
+
+  .hero-main {
+    max-width: 40rem;
+  }
+
+  .section {
+    padding: 3rem 0 2.8rem;
+  }
+
+  .section-alt {
+    padding: 2.6rem 2.1rem 2.6rem;
+  }
+}
+
